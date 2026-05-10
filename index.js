@@ -115,7 +115,7 @@ function feishuCard(title, content) {
   };
 }
 
-async function sendFeishuMessage(content, title = "科研社区签到") {
+async function sendFeishuMessage(content, title = "源社区签到") {
   const webhook = process.env.FEISHU_WEBHOOK;
   if (!webhook) return;
   const secret = process.env.FEISHU_SECRET;
@@ -149,7 +149,7 @@ async function sendFeishuMessage(content, title = "科研社区签到") {
   }
 }
 
-async function sendFeishuAppMessage(content, title = "科研社区签到") {
+async function sendFeishuAppMessage(content, title = "源社区签到") {
   const appId = process.env.FEISHU_APP_ID;
   const appSecret = process.env.FEISHU_APP_SECRET;
   const receiveId = process.env.FEISHU_APP_RECEIVE_ID;
@@ -237,7 +237,7 @@ async function run() {
 
   const content = `📆 时间：${now}\n\n${statusLogin}\n${statusSign}`;
   const allOk = statusLogin.includes("✅") && (statusSign.includes("✅") || statusSign.includes("⚠️"));
-  const title = allOk ? "✅ 科研社区签到成功" : "❌ 科研社区签到失败";
+  const title = allOk ? "✅ 源社区签到成功" : "❌ 源社区签到失败";
   const msg = `🎯 ycoo.net 自动签到\n${content}`;
 
   console.log(msg);
