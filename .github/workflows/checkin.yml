@@ -22,4 +22,10 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_APP_RECEIVE_ID: ${{ secrets.FEISHU_APP_RECEIVE_ID }}
+          FEISHU_APP_RECEIVE_TYPE: ${{ secrets.FEISHU_APP_RECEIVE_TYPE }}
         run: node index.js
